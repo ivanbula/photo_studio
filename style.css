@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Roboto:300,400&display=swap');
+:root {
+    --crna: #1e1e1e;  /* rgba(30, 30, 30, .9) */
+    --zelena: #78bc62; /* rgb(120, 188, 98) */
+    --zuta: #ffd944;   /* rgb(255, 217, 68) */
+    --siva: #102438;
+    --svetloSiva: #f4f4f4;
+    --bela: #fff;
+    --padding: 100px 0;
+    --headings: 3rem;
+    --transition: .3 ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color:  var(--siva);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quantico', sans-serif;
+}
+a{
+    transition: var(--transition);
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+ul li a:hover{
+    color: var(--zelena);
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+button{
+    text-transform: uppercase;
+    border: none;
+    color: var(--crna);
+    cursor: pointer;
+    padding: 12px 20px;
+    background: var(--zuta);
+    transition: var(--transition);
+}
+button:hover{
+    color: var(--zuta);
+    background: var(--crna);
+}
+.active a::after{
+    content: "";
+    display: block;
+    height: 2px solid lightgray;
+    background: var(--zelena);
+    width: 100%;
+    position: relative;
+    bottom: -15px;
+}
+/************************
+nav
+************************/
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+nav .logo{
+    flex: 0 0 40%;
+    padding-left: 50px;
+}
+nav .logo a{
+    color: var(--crna);
+    font-weight: 600;
+}
+nav .logo i{
+    color: var(--zelena);
+}
+nav ul{
+    flex: 0 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+nav ul li{
+    margin-left: 50px;
+}
+nav ul li:last-child{
+    margin-right: 30px;
+}
+nav ul li a{
+    color: var(--crna);
+    font-size: .9rem;
+}
+/************************
+header
+************************/
+.mainHeader{
+    background-image: linear-gradient(rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.3)), url(../Photo-studio/img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+.mainHeader hgroup{
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 60px;
+}
+.mainHeader h1{
+    color: var(--bela);
+    font-size: 5rem;
+}
+.mainHeader p{
+    color: var(--bela);
+    padding: 10px 0 20px 0;
+}
+
+/************************
+card
+************************/
+.card{
+    text-align: center;
+}
+.card hr{
+    width: 80%;
+    margin: 15px auto;
+    background: #e9e4e4;
+    border: none;
+    height: 2px solid lightgray;
+}
+.card p{
+    font-size: .8rem;
+    padding: 5px 0;
+}
+.card article{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+.card article div{
+    flex: 0 0 31%;
+}
+.card article div .img1{
+    background: url(../Photo-studio/img/services1.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 20vh;
+    width: 100%;
+}
+.card article div .img2{
+    background: url(../Photo-studio/img/services2.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 20vh;
+    width: 100%;
+}
+.card article div .img3{
+    background: url(../Photo-studio/img/services3.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 20vh;
+    width: 100%;
+}
+.card .text h3{
+    padding-top: 15px;
+}
+.card .text p{
+    padding: 0 15px;
+}
+.card .card-shadow{
+    padding: 20px;
+    box-shadow: 0 0 5px 1px rgb(226, 223, 223);
+    position: relative;
+    top: -90px;
+    background-color: var(--bela);
+}
+/************************
+works
+************************/
+.works{
+    padding-bottom: 100px;
+    text-align: center;
+}
+.works h2{
+    padding-bottom: 15px;
+    font-size: 1.8rem;
+}
+.works img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.works button{
+    background: var(--zelena);
+    color: var(--crna);
+    border: 1px solid var(--zelena);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.works button:hover{
+    background: transparent;
+    color: var(--zelena);
+    border: 1px solid var(--zelena);
+}
+.works .row{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70vh;
+    overflow: hidden;
+}
+.works .row article:first-child{
+    flex: 0 0 20%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.works .row article:first-child div{
+    height: 50%;
+    width: 100%;
+}
+.works .row article:last-child{
+    flex: 0 0 40%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.works .row article:last-child div:nth-of-type(2),
+.works .row article:last-child div:nth-of-type(3){
+    width: 50%;
+    height: 50%;
+}
+.works .row article:last-child div:nth-of-type(1){
+    width: 100%;
+    height: 50%;
+}
+.works .row article:nth-of-type(2){
+    flex: 0 0 40%;
+    height: 100%;
+}
+.works .row article:nth-of-type(2) div{
+    height: 100%;
+    width: 100%;
+}
+
+/************************
+contact
+************************/
+.contact{
+    padding: var(--padding);
+   
+}
+.contact i{
+    color: var(--zelena);
+    font-size: 1.5rem;
+}
+.contact .row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .row article{
+    flex: 0 0 50%;
+}
+.contact .row article h3{
+    font-size: 1.5rem;
+}
+.contact .row article h3 + p{
+    font-size: .8rem;
+    padding: 10px 30px 10px 0;
+}
+.contact .row article div{
+    display: inline-block;
+}
+.contact .row .info{
+    display: block;
+    margin-bottom: 30px;
+}
+.contact .row .info div{
+    padding-left: 20px;
+}
+.contact .fa-map-marker-alt {
+    padding-right: 6px;
+}
+
+.contact form{
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: flex-start;
+}
+.contact form input,
+.contact form textarea
+{
+    border: 1px solid var(--zelena);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    width: 80%;
+}
+.contact form input:focus,
+.contact form textarea:focus{
+    border: 1px solid var(--zelena);
+    outline: var(--bela);
+}
+.contact form button{
+    background: var(--zelena);
+    color: var(--crna);
+    border: 1px solid var(--zelena);
+}
+.contact form button:hover{
+    background: transparent;
+    color: var(--zelena);
+    border: 1px solid var(--zelena);
+}
+
+/************************
+pricing
+************************/
+.priceHeader{
+    background-image: linear-gradient(rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.3)), url(../Photo-studio/img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+}
+
+.pricing{
+    text-align: center;
+    padding: var(--padding);
+}
+.pricing h2{
+    font-size: 2.5rem;
+}
+.pricing button{
+    background: var(--zelena);
+    color: var(--crna);
+    border: 1px solid var(--zelena);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.pricing button:hover{
+    background: transparent;
+    color: var(--zelena);
+    border: 1px solid var(--zelena);
+}
+.pricing article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+    margin: 30px auto;
+}
+.pricing article div{
+    flex: 0 0 23%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 5px 5px #e9e4e4;
+}
+.pricing p{
+    font-size: .8rem;
+    padding: 5px 0;
+}
+.pricing hr{
+    width: 80%;
+    margin: 15px auto;
+    background: #e9e4e4;
+    border: none;
+    height: 2px solid lightgray;
+}
+.pricing article div span{
+    font-weight: 700;
+}
+
+/************************
+about
+************************/
+.intro{
+    padding-bottom: 100px;
+}
+.intro i{
+    color: var(--zelena);
+    background-color: var(--bela);
+    padding: 15px;
+    font-size: 1.4rem;
+}
+.intro h5{
+    font-size: .9rem;
+}
+.intro p{
+    font-size: .8rem;
+}
+.intro article .img{
+    background: url(../Photo-studio/img/about1.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: right center;
+    background-size: cover;
+}
+.intro article{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+.intro article h4{
+    font-size: 1.2rem;
+}
+
+.intro article div {
+    flex: 0 0 50%;
+}
+.intro article > div:first-child{
+    background-color: var(--svetloSiva);
+    padding: 50px;
+    height: 100%;
+}
+.intro .split{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+.intro .split .icon{
+    flex: 0 0 11%;
+    display: flex;
+    align-self: center;
+}
+.intro .split .service{
+    flex: 0 0 89%;
+}
+/************************
+team
+************************/
+.team{
+    text-align: center;
+    padding-bottom: 100px;
+}
+.team h3{
+    font-size: 2.5rem;
+}
+.team h3 + p{
+    font-size: .9rem;
+}
+.team article{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.team article div{
+    flex: 0 0 23%;
+}
+.team article div img{
+    width: 100%;
+    object-fit: cover;
+}
+.team article div h5{
+    color: var(--zelena);
+}
+.team article div h4{
+    color: var(--crna);
+    font-size: 1.2rem;
+}
+.team article div span{
+    color: rgb(128, 115, 115);
+    font-size: .9rem;
+    margin-right: 8px;
+    transition: var(--transition);
+}
+.team article div span:hover{
+    color: var(--zelena);
+}
+.team .bkg{
+    background-color: rgb(243, 239, 239);
+    padding: 15px 0;
+}
+/************************
+green
+************************/
+.green{
+    margin-bottom: 100px;
+    background: linear-gradient(rgba(120, 188, 98, .7), rgba(120, 188, 98, .7)), url(../Photo-studio/img/promote.jpg);
+    text-align: center;
+    padding: 70px 0 70px 0;
+    background-position: top;
+    background-size: cover;
+}
+.green h3{
+    font-size: 2.5rem;
+    color: var(--bela);
+}
+.green h3 + p{
+    font-size: .9rem;
+    color: var(--bela);
+    padding-bottom: 50px;
+}
+.green button{
+    color: var(--bela);
+    background: var(--crna);
+    border: 1px solid var(--crna);
+}
+.green button:hover{
+    color: var(--crna);
+    background: transparent;
+    border: 1px solid var(--crna);
+}
+/************************
+clients
+************************/
+.clients{
+    text-align: center;
+    padding-bottom: 100px;
+}
+.clients h3{
+    font-size: 2.5rem;
+    color: var(--crna);
+}
+.clients h3 + p{
+    font-size: .9rem;
+    color: var(--crna);
+    padding-bottom: 50px;
+}
+.clients article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.clients article > div{
+    flex: 0 0 32%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 3px solid rgb(243, 241, 241);
+}
+.clients p{
+    font-size: .9rem;
+}
+.clients h4 + p{
+    color: var(--zelena);
+}
+.clients article > div div{
+    flex: 0 0 50%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.clients article p{
+    text-align: left;
+}
+.clients img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.clients article div div:nth-of-type(2){
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 70px;
+}
+/************************
+footer
+************************/
+footer{
+    background: var(--crna);
+    color: var(--bela);
+    padding: var(--padding);
+}
+footer i{
+    color: var(--zelena);
+    margin-right: 5px;
+}
+footer h3{
+    font-size: 1.2rem;
+    display: inline-block;
+}
+footer h3 + p{
+    font-size: .9rem;
+    margin-top: 15px;
+}
+footer article:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+footer div{
+    flex: 0 0 23%;
+}
+footer h4{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+footer img{
+    width: 20%;
+}
+footer form input{
+    border: 2px solid var(--zelena);
+    color: var(--svetloSiva);
+    background: transparent;
+    padding: 7px 12px;
+    margin-top: 50px;
+}
+footer .fa-location-arrow{
+    background: var(--zelena);
+    padding: 8.5px;
+    color: var(--crna);
+    position: relative;
+    left: -4px;
+    bottom: -1px;
+}
+footer ul li a{
+    color: var(--bela);
+    font-size: .9rem;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer ul li{
+    flex: 0 0 50%;
+}
+footer article:last-child p{
+    font-size: .8rem;
+    text-align: center;
+    padding-top: 30px;
+}
+footer article:last-child p::before{
+    content: "";
+    display: block;
+    height: 1px;
+    background: #797474;
+    width: 70%;
+    margin: 10px auto 30px auto;
+}
+/************************
+responsive
+************************/
+@media (max-width: 767px){
+    .container {
+        margin: auto;
+        width: 100%;
+    }
+    nav .logo {
+        flex: 0 0 100%;
+        padding-left: 10px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    nav ul li {
+        margin-left: 50px;
+    }
+    nav ul {
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .mainHeader h1 {
+        font-size: 3rem;
+    }
+    .mainHeader p {
+        padding: 10px 0 20px 20px;
+    }
+    .mainHeader hgroup {
+        padding-right: 20px;
+    }
+    .card article {
+        width: 100%;
+    }
+    .card article div {
+        flex: 0 0 75%;
+        margin: 20px auto;
+    }
+    footer div {
+        flex: 0 0 100%;
+        margin: 20px auto;
+    }
+    .contact .row article {
+        flex: 0 0 100%;
+        margin: 20px auto;
+    }
+    .pricing article div {
+        flex: 0 0 100%;
+        margin: 20px 0;
+    }
+    .clients article > div {
+        flex: 0 0 100%;
+    }
+    .team article div {
+        flex: 0 0 100%;
+    }
+    .intro article {
+        height: 100vh;
+    }
+    .intro article div {
+        flex: 0 0 100%;
+    }
+    .intro .split {
+        padding: 0;
+    }
+    .team.container {
+        margin: 283px auto 0 auto;
+        width: 100%;
+    }
+    .intro article .img {
+        background: url(../Photo-studio/img/about1.jpg);
+            background-position-x: 0%;
+            background-position-y: 0%;
+            background-size: auto;
+        width: 50%;
+        height: 50%;
+        background-position: right center;
+        background-size: cover;
+        margin-top: 20px;
+    }
+}
